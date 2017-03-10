@@ -1,0 +1,11 @@
+{
+  "name": "哇哈哈",
+  "short_name": "whh",
+  "start_url": "index.html",
+  "display": "standalone",
+  "icons": [{
+    "src": "icon.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }]
+}
