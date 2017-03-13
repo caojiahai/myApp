@@ -64,7 +64,7 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
         }
       }
     })
-    //设置
+    //个人中心
     .state('tab.mine', {
       url: '/mine',
       views: {
@@ -74,7 +74,19 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
         }
       }
     })
+    //登录
+    .state('login', {
+      url: '/login',
+      templateUrl: 'templates/login/login.html',
+      controller: 'LoginCtrl'
+    })
+    //注册
+    .state('register', {
+      url: '/register',
+      templateUrl: 'templates/register/register.html',
+      controller: 'RegisterCtrl'
+    })
 
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/tab/home');
 
 });
