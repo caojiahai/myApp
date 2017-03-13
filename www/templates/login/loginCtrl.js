@@ -13,7 +13,7 @@ appCtrl.controller('LoginCtrl', function($scope,Toast,$state) {
 			log = "手机号不能为空!"
 			Toast.show(log);
 			return false;
-		}else if($scope.user == undefined || $scope.user == ""){
+		}else if($scope.user.pwd == undefined || $scope.user.pwd == ""){
 			log = "密码不能为空!"
 			Toast.show(log);
 			return false;
