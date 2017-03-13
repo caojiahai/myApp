@@ -154,3 +154,7 @@ db.transaction(function(response){
 //	}
 //}
 
+function goBack(index){
+	var index = index || -1;
+	history.go(index);
+}

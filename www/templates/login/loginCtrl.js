@@ -1,7 +1,7 @@
 /**
  * Created by cjh on 2017/3/10.
  */
-appCtrl.controller('LoginCtrl', function($scope,Toast,$state) {
+appCtrl.controller('LoginCtrl', function($scope,Toast,$state,$localStorage) {
 	$scope.user = {
 		tel:'',
 		pwd:''
@@ -35,8 +35,9 @@ appCtrl.controller('LoginCtrl', function($scope,Toast,$state) {
 				    			"tel":$scope.user.tel,
 				    			"pwd":$scope.user.pwd
 				    		}
-				    		localStorage.setItem('userInfo',JSON.stringify(data))
-				    		$state.go('tab.mine')
+				    		$localStorage.setObject('userInfo',JSON.stringify(data))
+				    		$localStorage.set('isLogin',true)
+				    		goBack()
 				    	}else{
 				    		log = "密码有误!";
 				    	}

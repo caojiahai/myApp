@@ -28,6 +28,7 @@ appCtrl.controller('RegisterCtrl', function($scope,Toast) {
 				    	log = "该用户已存在!";						    	
 				    }
 //				    tx.executeSql('insert into log (type,result) values ("注册","'+log+'")');
+					goBack()
 				    Toast.show(log)
 			    }, null);			
 			});

@@ -18,8 +18,11 @@
 			</div>			
 		</div>
 		<div class="textCenter">
-			<button ui-sref="login" class="btnSub">
+			<button ui-sref="login" class="btnSub" ng-if="!isLogin">
 				登录
+			</button>
+			<button ng-click="loginOut()" class="btnSub" ng-if="isLogin">
+				退出
 			</button>
 		</div>
 		
