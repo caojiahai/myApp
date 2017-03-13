@@ -26,3 +26,11 @@
 .btnSub {
 	line-height: 35px;background-color:#319BF7 ;border: 1px solid #319BF7;color: white;border-radius: 5px;width: 80%;
 }
+
+.line-height40 {
+	line-height: 40px;
+}
+
+.b-btm-colorCCC {
+	border-bottom: 1px solid #CCCCCC;
+}
