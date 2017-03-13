@@ -1,9 +1,9 @@
 var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
 var log = "";
 db.transaction(function(response){
-	response.executeSql('create table if not exists user (realName,pwd,nickName,age,sex)');
+	response.executeSql('create table if not exists user (tel,pwd,nickName,age,sex,headUrl)');
 	response.executeSql('create table if not exists log (type,result)');
-//	response.executeSql('insert into user (realName,pwd) values ("admin","123456")');
+//	response.executeSql('insert into user (tel,pwd) values ("15151618771","123456")');
 });
 
 //获取星期

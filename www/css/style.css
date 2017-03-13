@@ -11,3 +11,6 @@
     clear: both; 
     visibility: hidden;
 }
+.textCenter {
+	text-align: center;
+}
