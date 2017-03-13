@@ -64,6 +64,16 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
         }
       }
     });
+    //设置
+    .state('tab.mine', {
+      url: '/mine',
+      views: {
+        'tab-mine': {
+          templateUrl: 'templates/mine/tab-mine.html',
+          controller: 'MineCtrl'
+        }
+      }
+    });
 
   $urlRouterProvider.otherwise('/tab/dash');
 
