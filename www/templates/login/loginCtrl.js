@@ -40,7 +40,7 @@ appCtrl.controller('LoginCtrl', function($scope,Toast,$state) {
 				    	}else{
 				    		log = "密码有误!";
 				    	}
-				    	tx.executeSql('insert into log (type,result) values ("登录","'+log+'")');
+//				    	tx.executeSql('insert into log (type,result) values ("登录","'+log+'")');
 				    }
 				    Toast.show(log);
 			    }, null);
