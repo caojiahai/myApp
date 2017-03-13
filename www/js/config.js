@@ -63,7 +63,7 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
           controller: 'AccountCtrl'
         }
       }
-    });
+    })
     //设置
     .state('tab.mine', {
       url: '/mine',
@@ -73,7 +73,7 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
           controller: 'MineCtrl'
         }
       }
-    });
+    })
 
   $urlRouterProvider.otherwise('/tab/dash');
 
