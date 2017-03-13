@@ -1,12 +1,12 @@
-//左浮动
+
 .floatL {
 	float: left;
 }
-//右浮动
+
 .floatR {
 	float: right;
 }
-//清除浮动
+
 .clear:after {
     content: "."; 
     display: block;
@@ -14,15 +14,15 @@
     clear: both; 
     visibility: hidden;
 }
-//居中
+
 .textCenter {
 	text-align: center;
 }
-//div输入框
+
 .divInput {
 	line-height: 32px;border: 1px solid #319bf7;border-radius: 2px;margin: 10px 5px;
 }
-//button按钮
+
 .btnSub {
 	line-height: 35px;background-color:#319BF7 ;border: 1px solid #319BF7;color: white;border-radius: 5px;width: 80%;
 }
