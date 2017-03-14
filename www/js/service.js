@@ -14,3 +14,39 @@ app.factory('Toast', function () {
         }
     }
 })
+//loading
+app.factory('loading', ['$ionicLoading', '$timeout', 'Toast',
+    function ($ionicLoading, $timeout, Toast) {
+        var to,
+            tmp1 = '<ion-spinner icon="ios" class="customLoading"></ion-spinner>',
+            tmp2 = '<p style="background-color: #000;padding: 10px 20px;color: #fff;border-radius: 10px;" class="text-center">';
+        var show = function (prompt) {
+            $ionicLoading.show({
+                template: prompt ? tmp2 + prompt + '</p>' : tmp1
+            });
+            if (!prompt) {
+                to = $timeout(function () {
+                    $ionicLoading.hide();
+                }, 15000)
+            }
+        }
+        var hide = function () {
+            $ionicLoading.hide();
+            $timeout.cancel(to);
+        }
+
+        var prompt = function (template, time) {
+            $ionicLoading.hide();
+            time = time || 1000;
+            $ionicLoading.show({
+                template: template,
+                noBackdrop: true,
+                duration: time
+            });
+        };
+        return {
+            show: show,
+            hide: hide,
+            prompt: prompt
+        }
+    }]);
