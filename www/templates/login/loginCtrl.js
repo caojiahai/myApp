@@ -30,7 +30,6 @@ appCtrl.controller('LoginCtrl', function($scope,Toast,$state,$localStorage) {
 				    	}						    	
 				    	if(arr.indexOf($scope.user.pwd) != -1){			    		
 				    		log = "登录成功!";
-				    		sessionStorage.setItem('isLogin',true)
 				    		var data = {
 				    			"tel":$scope.user.tel,
 				    			"pwd":$scope.user.pwd

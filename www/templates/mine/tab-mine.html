@@ -1,5 +1,8 @@
 <ion-view view-title="个人中心">
 	<ion-content>
+		<div class="textCenter" style="font-size: 12px;color: #b92d00;background-color: #CCCCCC;" ng-if="!isLogin">
+			未登录
+		</div>
 		<div style="padding: 5px;">
 			<!--头像-->
 			<div class="clear b-btm-colorCCC" style="line-height: 55px;">
@@ -9,12 +12,12 @@
 			<!-- 昵称 -->
 			<div class="clear b-btm-colorCCC line-height40">
 				<div class="floatL">昵称</div>
-				<div class="floatR">CJH</div>
+				<div class="floatR" ng-bind="userInfo.tel">CJH</div>
 			</div>
 			<!-- 性别 -->
 				<div class="clear b-btm-colorCCC line-height40">
 				<div class="floatL">性别</div>
-				<div class="floatR">男</div>
+				<div class="floatR"ng-bind="userInfo.sex?userInfo.sex:''">男</div>
 			</div>			
 		</div>
 		<div class="textCenter">
