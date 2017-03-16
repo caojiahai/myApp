@@ -7,7 +7,8 @@
 			<!--头像-->
 			<div class="clear b-btm-colorCCC" style="line-height: 55px;">
 				<div class="floatL">头像</div>
-				<img ng-src="img/icon.png" class="floatR" style="width: 50px;height: 50px;border-radius: 50%;"/>
+				<image-selector images="images" style="width: 80px!important;right: 0px;left: auto!important;height: 60px!important;"></image-selector>
+				<img ng-src="{{userInfo.headUrl||headImg}}" class="floatR" style="width: 50px;height: 50px;border-radius: 50%;"/>
 			</div>
 			<!-- 昵称 -->
 			<div class="clear b-btm-colorCCC line-height40">

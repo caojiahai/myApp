@@ -19,7 +19,7 @@ appCtrl.controller('LoginCtrl', function($scope,Toast,$state,$localStorage) {
 			return false;
 		}else{
 			db.transaction(function (tx) {
-			    tx.executeSql('select * from user where tel="'+$scope.user.tel+'"', [], function (tx, results) {			    	
+			    tx.executeSql('select * from user where tel="'+$scope.user.tel+'"', [], function (tx, results) {
 				    var len = results.rows.length,i;
 				    if(len == 0){
 				    	log = "该用户不存在!";
@@ -28,12 +28,9 @@ appCtrl.controller('LoginCtrl', function($scope,Toast,$state,$localStorage) {
 				    	for(i=0;i<len;i++){
 				    		arr.push(results.rows.item(i).pwd)
 				    	}						    	
-				    	if(arr.indexOf($scope.user.pwd) != -1){			    		
+				    	if(arr.indexOf($scope.user.pwd) != -1){		
 				    		log = "登录成功!";
-				    		var data = {
-				    			"tel":$scope.user.tel,
-				    			"pwd":$scope.user.pwd
-				    		}
+				    		var data = results.rows.item(0);
 				    		$localStorage.setObject('userInfo',JSON.stringify(data))
 				    		$localStorage.set('isLogin',true)
 				    		goBack()
