@@ -13,7 +13,8 @@ appCtrl.controller('MineCtrl', function($scope,$localStorage,loading,qiniuFact,T
 	
 	$scope.loginOut = function(){
 		$scope.isLogin = false;
-		$localStorage.set('isLogin',false)
+		$localStorage.set('isLogin',false);
+		$scope.userInfo = {}
 	}
 	
 	$scope.$on('imageSelectorChange', function (e, data) {
@@ -21,6 +22,7 @@ appCtrl.controller('MineCtrl', function($scope,$localStorage,loading,qiniuFact,T
 			angular.forEach(data, function (f) {
 				var name = 'guider/head/'+new Date().getTime()+'.jpg';
 				qiniuFact.up2QiNiuFile(name,f).then(function(res){
+					$scope.userInfo.headUrl = res;
 					db.transaction(function (tx) {
 						tx.executeSql('select * from user where tel="'+$scope.userInfo.tel+'"', [], function (tx, results) {			    	
 						    var len = results.rows.length,i;
@@ -29,7 +31,6 @@ appCtrl.controller('MineCtrl', function($scope,$localStorage,loading,qiniuFact,T
 						    }else{
 						    	tx.executeSql('update user set headUrl="'+res+'" WHERE tel="'+$scope.userInfo.tel+'"');	
 						    	log = "上传成功!";
-						    	$scope.userInfo.headUrl = res;
 						    }
 						    Toast.show(log);
 					    }, null);
