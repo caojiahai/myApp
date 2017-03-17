@@ -52,6 +52,8 @@ app.run(function($ionicPlatform, $rootScope, Toast, $location) {
 											$rootScope.backButtonPressedOnceToExit = false;
 									}, 2000);
 							}
+            }else{
+            	goBack()
             }
 				
 		}, 101);

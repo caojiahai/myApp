@@ -54664,7 +54664,8 @@ function($rootScope, $state, $location, $document, $ionicPlatform, $ionicHistory
   });
 
   $rootScope.$ionicGoBack = function(backCount) {
-    $ionicHistory.goBack(backCount);
+//  $ionicHistory.goBack(backCount);
+	history.go(-1)
   };
 
   // Set the document title when a new view is shown
