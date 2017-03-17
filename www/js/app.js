@@ -5,6 +5,24 @@ var API_URL = 'http://115.29.149.164/mobile-API/';
 var paths = ['/tab/home'];
 //var API_URL = 'http://192.168.1.235:80/mobile-API/';
 app.run(function($ionicPlatform, $rootScope, Toast, $location) {
+	
+	
+	//电池状态
+//	  $rootScope.$on('$cordovaBatteryStatus:status', function (result) {
+//    var batteryLevel = result.level;       // (0 - 100)
+//    var isPluggedIn  = result.isPlugged;   // bool
+//  });
+//
+//  $rootScope.$on('$cordovaBatteryStatus:critical', function (result) {
+//    var batteryLevel = result.level;       // (0 - 100)
+//    var isPluggedIn  = result.isPlugged;   // bool
+//  });
+//
+//  $rootScope.$on('$cordovaBatteryStatus:low', function (result) {
+//    var batteryLevel = result.level;       // (0 - 100)
+//    var isPluggedIn  = result.isPlugged;   // bool
+//  });
+	
 		$ionicPlatform.ready(function() {
 				if(window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
 						cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
