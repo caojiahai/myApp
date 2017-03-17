@@ -1,5 +1,5 @@
 // Ionic Starter App
-var app = angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter.services'])
+var app = angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','ngCordova'])
 var appCtrl = angular.module('starter.controllers', [])
 var appService = angular.module('starter.services', [])
 var API_URL = 'http://115.29.149.164/mobile-API/';
